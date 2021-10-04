@@ -18,16 +18,21 @@ sp_data= yf.download('SPY',  # List of tickers
 
 ## GARCH Modeling and Volatility 
 
-<img src="" width="600" height="250">
 
 
 ## Volatility forecasting based on two diffrent approach:
 
 ### Fixed Rolling Window
 ### Expanding window
+<img src="https://user-images.githubusercontent.com/77374087/135907498-6f83b1f4-1445-4e0c-886d-e1b933d0a2dd.PNG" width="600" height="300">
 
 
 ## Value at Risk (VaR) Forecasting and Backtesting
+
+<img src="https://user-images.githubusercontent.com/77374087/135907697-f95fe867-c227-44a3-8e4a-5ef769f973f2.png" width="600" height="300">
+
+<img src="https://user-images.githubusercontent.com/77374087/135907806-e61133dc-b400-4e62-85f8-10926f957e84.png" width="600" height="300">
+
 
 
 
