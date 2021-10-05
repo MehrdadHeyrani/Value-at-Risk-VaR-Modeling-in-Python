@@ -26,6 +26,25 @@ sp_data= yf.download('SPY',  # List of tickers
 ### Expanding window
 <img src="https://user-images.githubusercontent.com/77374087/135907498-6f83b1f4-1445-4e0c-886d-e1b933d0a2dd.PNG" width="600" height="300">
 
+```
+Example of Evaluation
+------------------------------------------------
+Rolling Window Forcasting ARCH
+Mean Absolute Error (MAE): 0.000113
+Mean Absolute Percentage Error (MAPE): inf
+Root Mean Square Error (RMSE): 0.000438
+------------------------------------------------
+Rolling Window Forcasting GARCH
+Mean Absolute Error (MAE): 0.00014
+Mean Absolute Percentage Error (MAPE): inf
+Root Mean Square Error (RMSE): 0.0005
+------------------------------------------------
+Rolling Window Forcasting EGARCH
+Mean Absolute Error (MAE): 0.000147
+Mean Absolute Percentage Error (MAPE): inf
+Root Mean Square Error (RMSE): 0.000518
+```
+
 
 ## Value at Risk (VaR) Forecasting and Backtesting
 
