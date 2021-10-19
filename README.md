@@ -82,11 +82,12 @@ In the Fixed Rolling Window approach, new data are added while old ones are drop
 ### Expanding window
 In the Expanding Window approach, new data are continuously added to the sample without dropped old data
 
-<img src="https://user-images.githubusercontent.com/77374087/137956676-92b387d9-86e8-4c9c-9cef-10ddf1291f30.png" width="1000" height="300">
+<img src="https://user-images.githubusercontent.com/77374087/137956676-92b387d9-86e8-4c9c-9cef-10ddf1291f30.png" width="1200" height="200">
 
 
 
-<img src="https://user-images.githubusercontent.com/77374087/135907498-6f83b1f4-1445-4e0c-886d-e1b933d0a2dd.PNG" width="600" height="300">
+<img src="https://user-images.githubusercontent.com/77374087/137960884-38decceb-d573-4583-9b9b-05a3b17f082b.png" width="600" height="300">
+
 
 ```
 Example of Evaluation
