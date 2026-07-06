@@ -121,6 +121,155 @@ We can use the conditional variance given by the GARCH(1,1) model for the estima
 
 <img src="https://user-images.githubusercontent.com/77374087/135907806-e61133dc-b400-4e62-85f8-10926f957e84.png" width="600" height="300">
 
+# Updated Part (BackTest)
 
+```
+
+============================================================
+  EGARCH-rolling  |  VaR 99%  (α = 0.01)
+============================================================
+  Observations     : 501
+  Exceptions       : 23  (expected ≈ 5.0)
+  Observed rate    : 0.0459  (nominal 0.01)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 34.7872
+  p-value          : 0.0  X REJECT
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 0.8433
+  p-value          : 0.3584  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 35.6305
+  p-value          : 0.0000  X REJECT
+============================================================
+
+============================================================
+  EGARCH-expanding  |  VaR 99%  (α = 0.01)
+============================================================
+  Observations     : 501
+  Exceptions       : 73  (expected ≈ 5.0)
+  Observed rate    : 0.1457  (nominal 0.01)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 264.9352
+  p-value          : 0.0  X REJECT
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 0.0565
+  p-value          : 0.8121  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 264.9917
+  p-value          : 0.0000  X REJECT
+============================================================
+
+============================================================
+  EGARCH-rolling  |  VaR 95%  (α = 0.05)
+============================================================
+  Observations     : 501
+  Exceptions       : 62  (expected ≈ 25.1)
+  Observed rate    : 0.1238  (nominal 0.05)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 41.4221
+  p-value          : 0.0  X REJECT
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 0.4445
+  p-value          : 0.5049  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 41.8666
+  p-value          : 0.0000  X REJECT
+============================================================
+
+============================================================
+  EGARCH-expanding  |  VaR 95%  (α = 0.05)
+============================================================
+  Observations     : 501
+  Exceptions       : 80  (expected ≈ 25.1)
+  Observed rate    : 0.1597  (nominal 0.05)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 82.4879
+  p-value          : 0.0  X REJECT
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 0.0719
+  p-value          : 0.7886  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 82.5598
+  p-value          : 0.0000  X REJECT
+============================================================
+
+============================================================
+  EWMA  |  VaR 99%  (α = 0.01)
+============================================================
+  Observations     : 608
+  Exceptions       : 13  (expected ≈ 6.1)
+  Observed rate    : 0.0214  (nominal 0.01)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 5.9984
+  p-value          : 0.0143  X REJECT
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 1.1984
+  p-value          : 0.2736  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 7.1968
+  p-value          : 0.0274  X REJECT
+============================================================
+
+============================================================
+  MA  |  VaR 99%  (α = 0.01)
+============================================================
+  Observations     : 608
+  Exceptions       : 7  (expected ≈ 6.1)
+  Observed rate    : 0.0115  (nominal 0.01)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 0.1341
+  p-value          : 0.7142  ✓ pass
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 3.4522
+  p-value          : 0.0632  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 3.5863
+  p-value          : 0.1664  ✓ pass
+============================================================
+
+============================================================
+  HS  |  VaR 99%  (α = 0.01)
+============================================================
+  Observations     : 608
+  Exceptions       : 311  (expected ≈ 6.1)
+  Observed rate    : 0.5115  (nominal 0.01)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 2027.8412
+  p-value          : 0.0  X REJECT
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 1.6187
+  p-value          : 0.2033  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 2029.4599
+  p-value          : 0.0000  X REJECT
+============================================================
+
+============================================================
+  GARCH(1,1)  |  VaR 99%  (α = 0.01)
+============================================================
+  Observations     : 608
+  Exceptions       : 12  (expected ≈ 6.1)
+  Observed rate    : 0.0197  (nominal 0.01)
+  ── Kupiec POF ──────────────────────────
+  LR_POF           : 4.5361
+  p-value          : 0.0332  X REJECT
+  ── Christoffersen IND ─────────────────
+  LR_IND           : 1.454
+  p-value          : 0.2279  ✓ pass
+  ── Combined CC ────────────────────
+  LR_CC            : 5.9901
+  p-value          : 0.0500  ✓ pass
+============================================================
+
+           Model VaR level   T  Exceptions Exp. rate     α  Kupiec p Kupiec  Chr. p Chr.   CC p
+  EGARCH-rolling       99% 501          23     4.59% 1.00%    0.0000      ✘  0.3584    ✓ 0.0000
+EGARCH-expanding       99% 501          73    14.57% 1.00%    0.0000      ✘  0.8121    ✓ 0.0000
+  EGARCH-rolling       95% 501          62    12.38% 5.00%    0.0000      ✘  0.5049    ✓ 0.0000
+EGARCH-expanding       95% 501          80    15.97% 5.00%    0.0000      ✘  0.7886    ✓ 0.0000
+            EWMA       99% 608          13     2.14% 1.00%    0.0143      ✘  0.2736    ✓ 0.0274
+              MA       99% 608           7     1.15% 1.00%    0.7142      ✓  0.0632    ✓ 0.1664
+              HS       99% 608         311    51.15% 1.00%    0.0000      ✘  0.2033    ✓ 0.0000
+      GARCH(1,1)       99% 608          12     1.97% 1.00%    0.0332      ✘  0.2279    ✓ 0.0500
+```
 
 
